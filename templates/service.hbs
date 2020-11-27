@@ -1,0 +1,26 @@
+const {{ name }}Repository = require('../repositories/{{ name }}')
+
+exports.findAll{{ up name }}s = async () => {
+    const {{ name }}s = await {{ name }}Repository.findAll();
+    return {{ name }}s;
+};
+
+exports.find{{ up name }}ById = async (id) => {
+    const {{ name }} = await {{ name }}Repository.findById(id);
+    return {{ name }};
+};
+
+exports.insert{{ up name }} = async ({{ name }}) => {
+    const created{{ up name }} = await {{ name }}Repository.insert({{ name }});
+    return created{{ up name }};
+};
+
+exports.update{{ up name }} = async (id, {{ name }}) => {
+    const updated{{ up name }} = await {{ name }}Repository.update(id, {{ name }});
+    return updated{{ up name }};
+};
+
+exports.delete{{ up name }} = async (id) => {
+    const deleted{{ up name }} = await {{ name }}Repository.delete(id);
+    return deleted{{ up name }};
+};

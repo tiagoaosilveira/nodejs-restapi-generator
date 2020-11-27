@@ -1,0 +1,42 @@
+const { query } = require('express');
+const { {{ up name }} } = require('../models');
+//const queryUtil = require('../util/query');
+
+exports.findAll = async () => {
+    const {{ name }}s = await {{ up name }}.findAll();
+    return {{ name }}s;
+};
+
+exports.findById = async (id) => {
+    const {{ name }} = await {{ up name }}.findByPk(id);
+    return {{ name }};
+};
+
+exports.insert = async ({{ name }}) => {
+    const created{{ up name }} = await {{ up name }}.create({{ name }});
+    return created{{ up name }};
+};
+
+exports.update = async (id, {{ name }}) => {
+    const updated{{ up name }} = await {{ up name }}.update(
+        {{ name }},
+        {
+            returning: true, 
+            where: {
+                id: id
+            } 
+        }
+    )
+    return updated{{ up name }};
+};
+
+exports.delete = async (id) => {
+    const deleted{{ up name }} = await {{ up name }}.destroy(
+        {
+            where: {
+                id: id
+            }
+        }
+    )
+    return deleted{{ up name }};
+};

@@ -1,0 +1,12 @@
+const express = require('express');
+var router = express.Router();
+
+const {{ name }} = require('../controllers/{{ name }}');
+
+router.get('/', {{ name }}.listAll{{ ups name }});
+router.get('/:id', {{ name }}.find{{ up name }}ById);
+router.post('/', {{ name }}.insert{{ up name }});
+router.put('/:id', {{ name }}.update{{ up name }});
+router.delete('/:id', {{ name }}.delete{{ up name }});
+
+module.exports = router;
