@@ -19,14 +19,14 @@ This is a NodeJS RestApi Generator written in nodeJs
 <a name="install"></a>
 ## Installation
 
-For now, it generates a mock "product" CRUD using sequelize, PostgresSQL, and Express 
+For now, it generates a mock "product" CRUD using sequelize, PostgresSQL, and Express inside the folder /tmp
 
 ```sh
 npm install && node index
 ```
 
 <a name="endpoints"></a>
-## Endpoints
+## Generated Endpoints
 GET http://localhost:3001/products
 
 Result Body
